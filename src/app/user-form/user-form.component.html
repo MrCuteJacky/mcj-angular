@@ -1,0 +1,7 @@
+<form #form="ngForm">
+  <select name="user.sex" [(ngModel)]="user.sex" required>
+    <option *ngFor="let sex of sexArray" [value]="sex">{{sex}}</option>
+  </select>
+  <input type="text" name="user.name" [(ngModel)]="user.name" required />
+  <button (click)="save()" [disabled]="form.invalid">Save</button>
+</form>

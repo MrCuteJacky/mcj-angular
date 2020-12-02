@@ -5,12 +5,23 @@ import {FunctionComponent} from './function/function.component';
 import {BComponent} from './b/b.component';
 import {CComponent} from './c/c.component';
 import {ErrorComponent} from './error/error.component';
+import {UserManagerComponent} from './user-manager/user-manager.component';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'a',
     pathMatch: 'full'
+  },
+  {
+    path: 'user',
+    component: FunctionComponent,
+    children: [
+      {
+        path: '',
+        component: UserManagerComponent
+      }
+    ]
   },
   {
     path: 'a',

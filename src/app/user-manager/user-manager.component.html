@@ -1,0 +1,6 @@
+<app-user-form [user]="user" (saveEvent)="saveUser($event)"></app-user-form>
+<ol>
+  <li *ngFor="let user of users" (click)="edit(user)">
+    {{user.sex}}, {{user.name}}
+  </li>
+</ol>

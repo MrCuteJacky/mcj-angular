@@ -1,6 +1,16 @@
-<p>function header</p>
-<a routerLink="/a">aaa</a>|<a routerLink="/b">bbb</a>|<a routerLink="/c">ccc</a>|<a routerLink="/error">error</a>
-
-<router-outlet></router-outlet>
-
-<p>function footer</p>
+<div class="header">
+  <p>function header</p>
+  <p>
+    <a routerLink="/user">user</a>|
+    <a routerLink="/a">aaa</a>|
+    <a routerLink="/b">bbb</a>|
+    <a routerLink="/c">ccc</a>|
+    <a routerLink="/error">error</a>
+  </p>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
+<div class="footer">
+  <p>function footer</p>
+</div>

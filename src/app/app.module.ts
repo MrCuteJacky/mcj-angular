@@ -8,6 +8,9 @@ import { BComponent } from './b/b.component';
 import { CComponent } from './c/c.component';
 import { FunctionComponent } from './function/function.component';
 import { ErrorComponent } from './error/error.component';
+import { UserFormComponent } from './user-form/user-form.component';
+import { UserManagerComponent } from './user-manager/user-manager.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { ErrorComponent } from './error/error.component';
     BComponent,
     CComponent,
     FunctionComponent,
-    ErrorComponent
+    ErrorComponent,
+    UserFormComponent,
+    UserManagerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
