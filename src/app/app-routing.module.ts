@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {AComponent} from './a/a.component';
 import {FunctionComponent} from './function/function.component';
 import {BComponent} from './b/b.component';
 import {CComponent} from './c/c.component';
 import {ErrorComponent} from './error/error.component';
-import {UserManagerComponent} from './user-manager/user-manager.component';
+import {UserModule} from './user/user.module';
 
 const routes: Routes = [
   {
@@ -16,12 +16,7 @@ const routes: Routes = [
   {
     path: 'user',
     component: FunctionComponent,
-    children: [
-      {
-        path: '',
-        component: UserManagerComponent
-      }
-    ]
+    loadChildren: () => UserModule
   },
   {
     path: 'a',
